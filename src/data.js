@@ -1,0 +1,88 @@
+const list = [
+    {
+      id: 1,
+      title: "White and Blue shoes for men",
+      price: 789,
+      img: "./pics/white-and-blue2.jpg",
+      amount: 1,
+    },
+    {
+      id: 2,
+      title: "Campus chunky Orange",
+      price: 1998,
+      img: "./pics/chunky.jpg",
+      amount: 1,
+    },
+    {
+      id: 3,
+      title: "Multicolour Campus sneakers",
+      price: 1143,
+      img: "./pics/colourful.jpg",
+      amount: 1,
+    },
+    {
+      id: 4,
+      title: "Nike Green and Black sneakers",
+      price: 1557,
+      img: "./pics/green-and-black.jpg",
+      amount: 1,
+    },
+    {
+      id: 5,
+      title: "Unisex Running shoes",
+      price: 1499,
+      img: "./pics/running-shoes.jpg",
+      amount: 1,
+    },
+    {
+      id: 6,
+      title: "Comfortable Grey Running shoes ",
+      price: 1350,
+      img: "./pics/runners.jpg",
+      amount: 1,
+    },
+    {
+      id: 7,
+      title: "Swiss Chunky Shoes ",
+      price: 1693,
+      img: "./pics/swiss.jpg",
+      amount: 1,
+    },
+    {
+      id: 8,
+      title: "Nike Orange Sneakers",
+      price: 2289,
+      img: "./pics/orange.jpg",
+      amount: 1,
+    },
+    {
+      id: 9,
+      title: "Nike Jordan 6 ",
+      price: 2580,
+      img: "./pics/jordan6.jpg",
+      amount: 1,
+    },
+    {
+      id: 10,
+      title: "Puma Orange and Black shoes",
+      price: 2486,
+      img: "./pics/orange-and-black.jpg",
+      amount: 1,
+    },
+    {
+      id: 11,
+      title: "Brown All Terrain Boots",
+      price: 1120,
+      img: "./pics/brown-boots.jpg",
+      amount: 1,
+    },
+    {
+      id: 12,
+      title: "Nike Red Shoes",
+      price: 1957,
+      img: "./pics/redshoes.jpg",
+      amount: 1,
+    },
+];
+
+export default list;
