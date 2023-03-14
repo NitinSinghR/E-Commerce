@@ -14,6 +14,9 @@ section{
 .cards{
     width:250px;
     padding:20px;
+    transition-duration: 1s;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 
 .cards:hover{
@@ -21,6 +24,7 @@ section{
     cursor: pointer;
     background-color: rgb(154, 154, 98);
     border-radius: 15px;
+    scale:1.15;
 }
 
 .img_box img{
