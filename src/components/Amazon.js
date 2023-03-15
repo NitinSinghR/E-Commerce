@@ -20,10 +20,11 @@ const Amazon = ({handleClick}) => {
                 if(type ==='all'){
                     return i;
                 }else if(i.type.includes(type)){
+                    console.log(type);
                     return i;
                 }
             }).map((item) => (
-                <div className="cards">
+                <div className="cards" key={item.id}>
                 <div className='image_box'>
                     <img src={item.img} alt="hello"/>
                 </div>
