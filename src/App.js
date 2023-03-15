@@ -2,8 +2,7 @@ import React,{useState} from 'react';
 import  Navbar  from "./components/Navbar";
 import Amazon from './components/Amazon';
 import Cart from './components/Cart';
-import './styles/Amazon.css'
-
+import './styles/Amazon.css';
 
 const App = () => {
 
@@ -11,7 +10,7 @@ const App = () => {
   const[cart,setCart] = useState([]);
   const[warning,setWarning] =useState(false);
 
-  const handleClick =(item)=>{
+  const handleClick = (item) => {
     console.log(item);
     let isPresent=false;
     cart.forEach((product) => {
@@ -20,7 +19,7 @@ const App = () => {
     })
     if(isPresent){
       setWarning(true);
-      setTimeout(()=>{
+      setTimeout(() => {
         setWarning(false);
       },2000);
       return;
@@ -28,9 +27,9 @@ const App = () => {
     setCart([...cart,item]);
     }
 
-    const handleChange =(item,d) =>{
+    const handleChange = (item,d) => {
       let ind=-1;
-      cart.forEach((data,index)=>{
+      cart.forEach((data,index) => {
         if(data.id ===item.id)
           ind=index;
       });
@@ -44,8 +43,9 @@ const App = () => {
   return (
         <React.Fragment>
            <Navbar size={cart.length} setShow={setShow}/>  
+
            {
-            show?<Amazon handleClick={handleClick}/>:<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>
+            show ? <Amazon handleClick={handleClick}/> : <Cart cart={cart} setCart={setCart} handleChange={handleChange}/>
            }
            
             {
