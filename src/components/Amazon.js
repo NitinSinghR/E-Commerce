@@ -1,17 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import list from '../data';
 import '../styles/Amazon.css';
-import Cards from './Cards';
 
 const Amazon = ({handleClick}) => {
+    
+    const [type,setChange]=useState("");
+
   return (
-    <section>
-    {
-        list.map((item)=>(
-            <Cards item={item} key={item.id} handleClick ={handleClick}/>
-        ))
-    }
-    </section>
+    <>
+        <div className='filterProduct'>
+            <button onClick={()=>setChange("unisex")}>Unisex</button>
+             <button onClick={()=>setChange("Trending")}>Trending</button>
+             <button onClick={()=>setChange("Oversized")}>Chunky</button>
+             <button onClick={()=>setChange("all")}>All</button>
+        </div>
+        <section>
+        {
+            list.filter( i => {
+                if(type ==='all'){
+                    return i;
+                }else if(i.type.includes(type)){
+                    return i;
+                }
+            }).map((item) => (
+                <div className="cards">
+                <div className='image_box'>
+                    <img src={item.img} alt="hello"/>
+                </div>
+                <div className='details'>
+                    <p>{item.title}</p>
+                    <p>Price-{item.price}Rs</p>
+                    <button onClick={() =>handleClick(item)}>Add to Cart</button>
+                </div>
+            </div> 
+            ))
+        }
+        </section>
+   </> 
   )
 }
 
